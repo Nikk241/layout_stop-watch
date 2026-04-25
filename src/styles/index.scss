@@ -10,7 +10,6 @@ body {
 
 .stopwatch {
   display: flex;
-
   justify-content: center;
   align-items: center;
   position: relative;
@@ -26,9 +25,6 @@ body {
     width: var(--minutes-hand-width);
     height: var(--minutes-hand-height);
     animation: rotation 3600s steps(60) infinite;
-    &--speed-up {
-      @include animation-speed-up-minutes;
-    }
   }
 
   &__seconds {
@@ -38,9 +34,6 @@ body {
     width: var(--seconds-hand-width);
     height: var(--seconds-hand-height);
     animation: rotation 60s linear infinite;
-    &--speed-up {
-      @include animation-speed-up-seconds;
-    }
   }
 
   &__dot {
@@ -50,5 +43,15 @@ body {
     border-radius: 50%;
     width: var(--center-circle-diameter);
     height: var(--center-circle-diameter);
+  }
+
+  &--speed-up {
+    &__minute {
+      @include animation-speed-up-minutes;
+    }
+
+    &__seconds {
+      @include animation-speed-up-seconds;
+    }
   }
 }
