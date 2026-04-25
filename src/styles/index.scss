@@ -44,14 +44,12 @@ body {
     width: var(--center-circle-diameter);
     height: var(--center-circle-diameter);
   }
+}
 
-  &--speed-up {
-    &__minute {
-      @include animation-speed-up-minutes;
-    }
+.stopwatch--speed-up .stopwatch__minute {
+  @include animation-speed-up-minutes;
+}
 
-    &__seconds {
-      @include animation-speed-up-seconds;
-    }
-  }
+.stopwatch--speed-up .stopwatch__seconds {
+  @include animation-speed-up-seconds;
 }
